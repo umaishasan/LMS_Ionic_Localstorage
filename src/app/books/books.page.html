@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Books</ion-title>
+    <ion-button fill="solid" size="small" slot="start" (click)="backk()">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-button>
+    <ion-button  fill="solid" size="small" slot="end" (click)="presentModal()">
+      <ion-icon name="add-outline"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="mainBack">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-item *ngFor="let i of bookList; let j = index;">
+    <ion-label>{{i.name}}</ion-label>
+    <ion-button fill="clear" (click)="updatee(j)">
+      <ion-icon name="pencil-outline"></ion-icon>
+    </ion-button>
+    <ion-button fill="clear" (click)="delete(j)">
+      <ion-icon name="trash-outline"></ion-icon>
+    </ion-button>
+  </ion-item>
+</ion-content>

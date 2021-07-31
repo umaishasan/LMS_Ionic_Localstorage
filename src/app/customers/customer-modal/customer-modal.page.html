@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Customer Add</ion-title>
+    <ion-button fill="solid" size="small" slot="start" (click)="backk()">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="mainBack">
+  <ion-card>
+    <ion-item>
+      <ion-input type="text" placeholder="Enter Customer name" [(ngModel)]="cname"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-select placeholder="Select Book" [(ngModel)]="book">
+        <ion-select-option *ngFor="let i of bookList" value="{{i.name}}">{{i.name}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-button expand="full" shape="round" (click)="add()">Add</ion-button>
+  </ion-card>
+</ion-content>

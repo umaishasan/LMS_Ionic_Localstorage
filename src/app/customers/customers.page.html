@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Customers</ion-title>
+    <ion-button  fill="solid" size="small" slot="start" (click)="backk()">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-button>
+    <ion-button  fill="solid" size="small" slot="end" (click)="presentModal()">
+      <ion-icon name="add-outline"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="mainBack">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-item *ngFor="let i of customerList; let j = index;">
+    <ion-label>
+      {{i.name}}
+      <p>Book assigned: {{i.bookAssign}}</p>
+    </ion-label>
+  </ion-item>
+</ion-content>

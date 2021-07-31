@@ -1,0 +1,7 @@
+{
+  "name": "LibraryManagementSystem",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

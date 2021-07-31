@@ -1,0 +1,31 @@
+.mainBack{
+  --background:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(../../assets/lib.jpeg) 0/100% 100% no-repeat;
+}
+
+ion-button{
+  margin: 10px;
+}
+
+.cnterDiv{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ion-card{
+  background: transparent;
+  box-shadow: none !important;
+}
+
+ion-item{
+  --border-width: 0;
+  border-radius: 30px;
+  border: 1px solid white;
+  margin: 10px;
+  --background: transparent;
+  color: white;
+  ion-icon{
+    color: white;
+  }
+}

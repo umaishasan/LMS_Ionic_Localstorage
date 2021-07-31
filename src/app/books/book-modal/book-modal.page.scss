@@ -1,0 +1,18 @@
+ion-card{
+    box-shadow: none !important;
+    --background: transparent;
+}
+
+ion-item{
+    border-radius: 30px;
+    border: 1px solid black;
+    margin: 10px;
+}
+
+ion-button{
+    margin: 5px;
+}
+
+ion-content{
+    --background: transparent;
+}

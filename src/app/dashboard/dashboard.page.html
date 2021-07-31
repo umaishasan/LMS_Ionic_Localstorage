@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar  color="primary">
+    <ion-title>Dashboard</ion-title>
+    <ion-button fill="solid" size="small" slot="end" (click)="logut()">
+      <ion-icon name="exit-outline"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="mainBack">
+  <div class="cntrAlign">
+    <ion-card class="book-card" (click)="booksOpen()">
+      <ion-card-header>Books</ion-card-header>
+      <ion-img src="assets/book.jpg"></ion-img>
+    </ion-card>
+  </div>
+  <div class="cntrAlign">
+    <ion-card class="customer-card" (click)="customersOpen()">
+      <ion-card-header>Customers</ion-card-header>
+      <ion-img src="assets/customer.jpeg"></ion-img>
+    </ion-card>
+  </div>
+</ion-content>

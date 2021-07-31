@@ -1,0 +1,11 @@
+.mainBack{
+    --background:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(../../assets/lib.jpeg) 0/100% 100% no-repeat;
+}
+
+ion-item{
+    --background: transparent;
+    color: white;
+    p{
+        color: gray;
+    }
+}

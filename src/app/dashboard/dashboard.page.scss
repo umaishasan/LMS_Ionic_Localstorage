@@ -1,0 +1,26 @@
+.mainBack{
+    --background:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(../../assets/lib.jpeg) 0/100% 100% no-repeat;
+}
+
+.cntrAlign{
+    display: flex;
+    margin: 30px;
+}
+
+.book-card{
+    background-color: lightgrey;
+    margin: auto;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.customer-card{
+    background-color: lightgrey;
+    margin: auto;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    font-weight: bold;
+}

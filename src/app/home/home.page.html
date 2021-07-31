@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="forTolbar" color="primary">
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="mainBack">
+  <div class="cnterDiv">
+    <ion-card>
+      <ion-item>
+        <ion-input type="text" placeholder="Enter Email" [(ngModel)]="email"></ion-input>
+        <ion-icon slot="start" name="mail-outline"></ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" placeholder="Enter Password" [(ngModel)]="password"></ion-input>
+        <ion-icon slot="start" name="lock-closed-outline"></ion-icon>
+      </ion-item>
+      <ion-button expand="full" shape="round" (click)="loginn()">Login</ion-button>
+    </ion-card>
+  </div>
+</ion-content>
