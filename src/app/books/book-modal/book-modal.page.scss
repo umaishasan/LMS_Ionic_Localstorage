@@ -10,9 +10,15 @@ ion-item{
 }
 
 ion-button{
-    margin: 5px;
+    margin: 15px;
 }
 
 ion-content{
-    --background: transparent;
+    --background: transparent; 
+}
+
+span{
+    margin-left: 25px;
+    color: red;
+    font-size: 12px;
 }

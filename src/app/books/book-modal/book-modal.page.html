@@ -9,9 +9,12 @@
 
 <ion-content>
   <ion-card>
+    <form [formGroup]="bookform" (ngSubmit)="add()">
     <ion-item>
-      <ion-input type="text" placeholder="Enter Book name" [(ngModel)]="bname"></ion-input>
+      <ion-input type="text" formControlName="Bname" placeholder="Enter Book name" [(ngModel)]="bname"></ion-input>
     </ion-item>
-    <ion-button expand="full" shape="round" (click)="add()">Add</ion-button>
+    <span *ngIf="bookform.get('Bname').hasError('required') && bookform.get('Bname').touched">Book name should not be empty</span>
+    <ion-button type="submit" expand="full" shape="round" [disabled]="!bookform.valid">Add</ion-button>
+  </form>
   </ion-card>
 </ion-content>

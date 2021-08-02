@@ -15,6 +15,8 @@ const USER_KEY = "user-key";
 export class HomePage {
   email: string;
   password: string;
+  showpass: boolean = false;
+  toggleIcon: 'eye-outline' | 'eye-off-outline' = 'eye-outline';
 
   constructor(private service: ServiceService, private route: Router) { }
 
@@ -24,6 +26,15 @@ export class HomePage {
     console.log(a);
     if (USER_KEY) {
       this.route.navigateByUrl('/dashboard');
+    }
+  }
+
+  checkPass(){
+    this.showpass = !this.showpass;
+    if(this.toggleIcon == 'eye-outline'){
+      this.toggleIcon = 'eye-off-outline';
+    }else{
+      this.toggleIcon = 'eye-outline';
     }
   }
 

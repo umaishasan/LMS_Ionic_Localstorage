@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { ServiceService } from 'src/app/service/service.service';
+import {FormControl,FormGroup,Validators} from '@angular/forms';
 
 interface Books{
   id: any;
@@ -14,12 +15,17 @@ const BOOKS_KEY = "librarybook";
   styleUrls: ['./book-modal.page.scss'],
 })
 export class BookModalPage implements OnInit {
+  bookform: FormGroup;
   bname: string;
   savebook: Books = <Books>{};
 
   constructor(public modalController: ModalController,private servs: ServiceService) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.bookform = new FormGroup({
+      Bname: new FormControl('',Validators.required)
+    });
+  }
 
   backk(){
     this.modalController.dismiss();

@@ -1,5 +1,6 @@
 
 ion-card{
+    --background: transparent;
     box-shadow: none !important;
 }
 
@@ -10,5 +11,15 @@ ion-item{
 }
 
 ion-button{
-    margin: 5px;
+    margin: 15px;
+}
+
+ion-content{
+    --background: transparent; 
+}
+
+span{
+    font-size: 12px;
+    color: red;
+    margin-left: 25px;
 }

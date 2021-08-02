@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { ServiceService } from 'src/app/service/service.service';
+import {FormGroup,FormControl,Validators} from '@angular/forms';
 
 interface Customer {
   id: any;
@@ -19,6 +20,7 @@ export class CustomerModalPage implements OnInit {
   savecustomer: Customer = <Customer>{};
   book: string;
   bookList: any;
+  CustoForm: FormGroup;
 
   constructor(public modalController: ModalController,private servs: ServiceService) { 
     this.servs.read(BOOKS_KEY).then(a => {
@@ -27,7 +29,12 @@ export class CustomerModalPage implements OnInit {
     });
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.CustoForm = new FormGroup({
+      Cusname: new FormControl('',Validators.required),
+      Boook: new FormControl(null,Validators.required) 
+    });
+  }
 
   backk(){
     this.modalController.dismiss();

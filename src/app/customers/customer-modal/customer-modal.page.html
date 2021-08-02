@@ -9,14 +9,18 @@
 
 <ion-content class="mainBack">
   <ion-card>
+    <form [formGroup]="CustoForm" (ngSubmit)="add()">
     <ion-item>
-      <ion-input type="text" placeholder="Enter Customer name" [(ngModel)]="cname"></ion-input>
+      <ion-input type="text" formControlName="Cusname" placeholder="Enter Customer name" [(ngModel)]="cname"></ion-input>
     </ion-item>
+    <span *ngIf="CustoForm.get('Cusname').hasError('required') && CustoForm.get('Cusname').touched">Customer name should not be empty</span>
     <ion-item>
-      <ion-select placeholder="Select Book" [(ngModel)]="book">
+      <ion-select placeholder="Select Book" formControlName="Boook" [(ngModel)]="book">
         <ion-select-option *ngFor="let i of bookList" value="{{i.name}}">{{i.name}}</ion-select-option>
       </ion-select>
     </ion-item>
-    <ion-button expand="full" shape="round" (click)="add()">Add</ion-button>
+    <span *ngIf="CustoForm.get('Boook').hasError('required') && CustoForm.get('Boook').touched">Book should not be empty</span>
+    <ion-button type="submit" expand="full" shape="round" [disabled]="!CustoForm.valid">Add</ion-button>
+  </form>
   </ion-card>
 </ion-content>
